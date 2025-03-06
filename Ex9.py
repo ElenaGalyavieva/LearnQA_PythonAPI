@@ -10,6 +10,6 @@ for i in range(len(password)):
     payload2 = {"auth_cookie": cookie}
     response2 = requests.post("https://playground.learnqa.ru/api/check_auth_cookie", cookies=payload2)
 
-    if response2.text == "You are authorized":
+    if response2.text != "You are NOT authorized":
         print("Valid password is: ", password[i])
         print(response2.text)
