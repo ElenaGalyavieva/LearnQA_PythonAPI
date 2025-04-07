@@ -11,7 +11,7 @@ class TestEx13:
     ])
     def test_ex13(self, user_agent, platform, browser, device):
         data = {'User-Agent':user_agent}
-        response1 = requests.get("https://playground.learnqa.ru/ajax/api/user_agent_check", headers=data)
+        response1 = requests.get("https://playground.learnqa.ru/api/user_agent_check", headers=data)
         some_header1 = response1.json()
 
         assert response1.status_code == 200, "Wrong response code"
